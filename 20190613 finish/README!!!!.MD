@@ -1177,7 +1177,7 @@ public void search(String charText) {
         // 리스트 데이터가 변경되었으므로 아답터를 갱신하여 검색된 데이터를 화면에 보여준다.
         adapter.notifyDataSetChanged();
     }
-```
+     ```
 
   ## **8. 유사어플과의 차이점**<br>
   ![KakaoTalk_20190613_033425856](https://user-images.githubusercontent.com/48273803/59402439-3cdc4900-8dd9-11e9-9e9f-c83aa0c87404.png)
