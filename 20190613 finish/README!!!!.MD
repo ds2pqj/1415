@@ -315,11 +315,12 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
         final View view = LayoutInflater.from(this).inflate(R.layout.dialog_add_city,null);
         mbuilder.setView(view);
         final TextView editTextAddCityName = view.findViewById(R.id.editTextAddCityName);
+        //회원정보에서 받은 address값을 다이얼로그 입력란에 전달
         Bundle intent = getIntent().getExtras();
         editTextAddCityName.setText(intent.getString("address"));
         final InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-
+         //add버튼을 누르면 키보드 칸이 없어지고 카드뷰가  실행
         mbuilder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
@@ -328,6 +329,7 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
                 imm.toggleSoftInput(InputMethodManager.HIDE_NOT_ALWAYS,0);
             }
         });
+        //cancel 버튼을누르면 키보드가 사라지고 toast로 cacel로 
         mbuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int which) {
@@ -344,6 +346,7 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
     ![weather3](https://user-images.githubusercontent.com/48273829/59401598-36989d80-8dd6-11e9-8ca8-5c9b80f93433.JPG)
     
     ```
+    //카드뷰를 추가 하고 if문은 다이얼로그에 입력 받은 도시가 openweathermap에 있으면 카드뷰를 쌓아주고 없으면 토스트 출력
      public void addCity(String cityName){
          Call<CityWeather> cityWeather = weatherServices.getWeatherCity(cityName, API.KEY, "metric",6);
         cityWeather.enqueue(new Callback<CityWeather>() {
@@ -359,6 +362,7 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
                     Toast.makeText(MainActivity.this,"Sorry, city not found",Toast.LENGTH_LONG).show();
                 }
             }
+            //openweathermap server 문제나 스마트폰 data가 안될시 토스트 출력
             @Override
             public void onFailure(Call<CityWeather> call, Throwable t) {
                 Toast.makeText(MainActivity.this,"Sorry, weather services are currently unavailable",Toast.LENGTH_LONG).show();
@@ -374,6 +378,7 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
             * 한국 겨울 옷(15장), 영국 겨울 옷(15장), 일본 겨울 옷(15장)
             ```
             //한국 봄 옷 30장
+            //중복 
              List<String> urlImage = new ArrayList<String>();
             urlImage.add("https://firebasestorage.googleapis.com/v0/b/signup-2b39d.appspot.com/o/image%2FKorea%2Fspring%2FCardigan.PNG?alt=media&token=7971b062-a7e5-403e-ab53-f32686867b78");
             urlImage.add("https://firebasestorage.googleapis.com/v0/b/signup-2b39d.appspot.com/o/image%2FKorea%2Fspring%2F%EA%B0%80%EC%A3%BD%EC%9E%90%EC%BC%93.PNG?alt=media&token=721f4ca6-61dc-45ae-ba29-51498cb4f2c5");
@@ -410,20 +415,20 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
             ```
         * 구역별 ID 값 지정
         ```
-        //한국 3장
+        //한국 3장 위치
         imageView=(ImageView)findViewById(R.id.imageView_01);
         imageView1=(ImageView)findViewById(R.id.imageView_02);
         imageView2=(ImageView)findViewById(R.id.imageView_03);
-        //영국 3장
+        //영국 3장 위치
         imageView3=(ImageView)findViewById(R.id.imageView_04);
         imageView4=(ImageView)findViewById(R.id.imageView_05);
         imageView5=(ImageView)findViewById(R.id.imageView_06);
-        //일본 3장
+        //일본 3장 위치
         imageView6=(ImageView)findViewById(R.id.imageView_07);
         imageView7=(ImageView)findViewById(R.id.imageView_08);
         imageView8=(ImageView)findViewById(R.id.imageView_09);
         ```
-        * 랜덤 변수
+        * 랜덤 변수 
          ```
           r = new Random();
          ```
@@ -532,7 +537,7 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
     4. CardView를 클릭하면 7일치 날씨 정보 확인가능<br>
     ![weather1](https://user-images.githubusercontent.com/48273829/59383393-cddfff80-8d9a-11e9-98f0-24d5f819dfa3.JPG)
     ```
-    //cardview를 클릭하면 weatherdetail로 
+    //cardview를 클릭하면 weatherdetail로 넘어가는 함수
      adapter = new CityWeatherAdapter(cities, R.layout.weather_card, this, new CityWeatherAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(CityWeather cityWeather, int position, View clickView) {
