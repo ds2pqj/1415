@@ -259,7 +259,7 @@
     4. https://samples.openweathermap.org/data/2.5/forecast?q=London,us&mode=xml&appid=b6907d289e10d714a6e88b30761fae22 방식으로 구현
     ![openweather7](https://user-images.githubusercontent.com/48273829/59378815-2e1d7400-8d90-11e9-8da0-467f5b73262f.png)
     5. Retrofit을 이용하여 API를 API Class에 접목<br>
-    BASE URL을 두고 발급받은 API를 입력하고 밑에 있는 WeatherService interface를 사용하기 위하여 retrofitdmf 초기화 해줍니다.
+    BASE URL을 두고 발급받은 API를 입력하고 밑에 있는 WeatherService interface를 사용하기 위하여 retrofit 초기화 해줍니다.
    ```
    //API
     public class API {
