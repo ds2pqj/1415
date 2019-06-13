@@ -791,10 +791,6 @@ sharedPreferences -> Boolean, Integer, Float, Long, String 데이터 타입 같�
 ![GUESS0001](https://user-images.githubusercontent.com/48505912/59402470-55e4fa00-8dd9-11e9-9225-d1c9dc4253a9.jpg)<br>
 ## **6. 딥러닝**
  * 딥러닝 환경구축
-    * Manifest
-        * uses-permission android:name="android.permission.CAMERA
-        * uses-feature android:name="android.hardware.camera
-        * uses-feature android:name="android.hardware.camera.autofocus
     * 사용된 딥러닝 환경<br>
     ![캡처](https://user-images.githubusercontent.com/48273803/59388899-f4586780-8da7-11e9-9185-ac55d2056c41.PNG)
 
