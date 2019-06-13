@@ -222,7 +222,15 @@
         }
    ```
   Check Firebase Realtime Database : Tool -> Firebase -> Realtime Database -> 
-   `Connect your app to Firebase` & `Add the Realtime Database to your app` 
+   `Connect your app to Firebase` & `Add the Realtime Database to your app`
+   ```
+   dependencies {
+        ...
+   implementation 'com.google.firebase:firebase-database:17.0.0'
+        ...
+   }
+   ```
+   위 코드를 gradle에 추가한다
   ## **2. API(날씨) 및 날씨 적용 방법**
 * 날씨 사용한 도구
     * OpenWeatherMap - Weather API 사용
