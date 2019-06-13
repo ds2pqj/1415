@@ -42,7 +42,7 @@
    <br> ![스마트폰 화면](https://user-images.githubusercontent.com/48273829/59201701-f7036300-8bd5-11e9-8316-6e93c4c42d5e.jpg)
    <br>![어플로고](https://user-images.githubusercontent.com/48273829/59193796-cf0a0480-8bc1-11e9-950a-8d351e1bc659.png)<br>
 ### **DR**[Dull Routine]은 **'지루한 일상'** 이라는 의미로
-### 기존의  지루한 일상에서 옷에 새로운 변화를 줌으로서 새로운 <br> 재미를 찾을 수 있는 취지에서 프로그래밍 되었습니다.
+### 기존의  지루한 일상에서 옷에 새로운 변화를 줌으로서 새로운 <br> 재미를 찾을 수 있는 취지에서 프로그래밍 .
 ### 2. 스플래쉬
 ![어플 스플래쉬](https://user-images.githubusercontent.com/48273829/59195476-0d55f280-8bc7-11e9-8b87-f2742ca7431b.gif)<br>
 ### 3. 인트로화면
