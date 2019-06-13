@@ -1150,7 +1150,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     }
 ```
 리스트뷰
-```
+  ```
 public void search(String charText) {
 
         // 문자 입력시마다 리스트를 지우고 새로 뿌려준다.
