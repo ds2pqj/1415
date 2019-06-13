@@ -304,7 +304,8 @@ implementation 'com.squareup.picasso:picasso:2.5.2'
 ```
 1. FloatingActionButton![날씨 추가](https://user-images.githubusercontent.com/48273829/59200581-8c512800-8bd3-11e9-83e2-8e0a8136c3fd.png)을 누르고 Dialog를 통해 CityName입력 후 ADD클릭<br>
     ![weather2](https://user-images.githubusercontent.com/48273829/59401549-0c46e000-8dd6-11e9-9d3a-af7ffe650305.JPG)<br> ![weather](https:user-images.githubusercontent.com/48273829/59381773-39c06900-8d97-11e9-8524-42f989fd298c.JPG)
-   ```
+   
+  ```
    //버튼을 누르면 다이얼로그 실행
    public void showAlertAddCity(String title, String message){
         AlertDialog.Builder mbuilder = new AlertDialog.Builder(this);
